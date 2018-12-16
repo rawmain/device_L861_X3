@@ -36,8 +36,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
 	Camera2 \
-	Snap \
-	libcamera_parameters_ext
+	Snap
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -312,10 +311,11 @@ PRODUCT_PACKAGES += \
 	gps.mt6795 \
 	libcurl
 
-# camera
+#camera
 PRODUCT_PACKAGES += \
 	libbwc \
-	libm4u
+	libm4u \
+        libcamera_parameters_mtk
 
 #Camera Legacy
 PRODUCT_PROPERTY_OVERRIDES += \
