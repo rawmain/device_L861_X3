@@ -194,7 +194,10 @@ on post-fs-data
     # GPS
     mkdir /data/gps_mnl 0771 gps system
     mkdir /data/misc/gps 0770 gps system
-    
+
+    # NFC
+    mkdir /data/nfc_socket 0771 nfc radio
+        
     # Smartwake
     chown system system /sys/devices/soc/soc:touch@/smartwake_active
     chown system system /sys/devices/soc/soc:touch@/wakeup_gesture
@@ -388,6 +391,17 @@ on post-fs-data
     # GPIO
     chmod 0664 /dev/mtgpio
 
+	# fuelgauged
+    chown root system /sys/devices/platform/battery_meter
+    chown root system /sys/devices/platform/battery_meter/FG_daemon_log_level
+    chown root system /sys/devices/platform/battery_meter/FG_discharge_tracking_time
+   
+    chmod 0666 /sys/devices/platform/battery_meter/FG_daemon_log_level
+	chmod 0666 /sys/devices/platform/battery_meter/FG_discharge_tracking_time
+    
+	write /sys/devices/platform/battery_meter/FG_daemon_log_level 7
+	write /sys/devices/platform/battery_meter/FG_discharge_tracking_time 30
+
     # SPM SODI Enable
     chown media /proc/mcdi/sodi_en
     chmod 0664 /proc/mcdi/sodi_en
@@ -531,6 +545,10 @@ on post-fs-data
     #MATV
     chmod 0660 /dev/MATV
     chown system media /dev/MATV
+
+    #VIBRATOR DRV2605
+    chmod 0660 /dev/drv2605
+    chown root system /dev/drv2605
 
     # otg_test
     chown root radio /dev/mt_otg_test
@@ -748,7 +766,71 @@ on boot
     chown root radio /proc/net/netfilter/nfnetlink_queue
 
     chown radio system /proc/cpufreq/cpufreq_cur_freq
+
+    chown radio system /sys/devices/system/cpu/cpu0/online
+    chown radio system /sys/devices/system/cpu/cpu0/power
     chown radio system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    
+    chown radio system /sys/devices/system/cpu/cpu1/online
+    chown radio system /sys/devices/system/cpu/cpu1/power
+    chown radio system /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+
+    chown radio system /sys/devices/system/cpu/cpu2/online
+    chown radio system /sys/devices/system/cpu/cpu2/power
+    chown radio system /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+
+    chown radio system /sys/devices/system/cpu/cpu3/online
+    chown radio system /sys/devices/system/cpu/cpu3/power
+    chown radio system /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+
+    chown radio system /sys/devices/system/cpu/cpu4/online
+    chown radio system /sys/devices/system/cpu/cpu4/power
+    chown radio system /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+    
+    chown radio system /sys/devices/system/cpu/cpu5/online
+    chown radio system /sys/devices/system/cpu/cpu5/power
+    chown radio system /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
+    
+    chown radio system /sys/devices/system/cpu/cpu6/online
+    chown radio system /sys/devices/system/cpu/cpu6/power
+    chown radio system /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
+    
+    chown radio system /sys/devices/system/cpu/cpu7/online
+    chown radio system /sys/devices/system/cpu/cpu7/power
+    chown radio system /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
+# fix gouverneur change
+
+    chmod 0664 /sys/devices/system/cpu/cpu0/online
+    chmod 0664 /sys/devices/system/cpu/cpu0/power
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    
+    chmod 0664 /sys/devices/system/cpu/cpu1/online
+    chmod 0664 /sys/devices/system/cpu/cpu1/power
+    chmod 0664 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+    
+    chmod 0664 /sys/devices/system/cpu/cpu2/online
+    chmod 0664 /sys/devices/system/cpu/cpu2/power
+    chmod 0664 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+    
+    chmod 0664 /sys/devices/system/cpu/cpu3/online
+    chmod 0664 /sys/devices/system/cpu/cpu3/power
+    chmod 0664 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+    
+    chmod 0664 /sys/devices/system/cpu/cpu4/online
+    chmod 0664 /sys/devices/system/cpu/cpu4/power
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+    
+    chmod 0664 /sys/devices/system/cpu/cpu5/online
+    chmod 0664 /sys/devices/system/cpu/cpu5/power
+    chmod 0664 /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
+    
+    chmod 0664 /sys/devices/system/cpu/cpu6/online
+    chmod 0664 /sys/devices/system/cpu/cpu6/power
+    chmod 0664 /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor  
+    
+    chmod 0664 /sys/devices/system/cpu/cpu7/online
+    chmod 0664 /sys/devices/system/cpu/cpu7/power
+    chmod 0664 /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor 
 
 # WMT proc
 		chown shell system /proc/driver/wmt_dbg
@@ -759,6 +841,7 @@ on boot
     chown system radio /dev/ttyGS0
     chmod 0660 /dev/ttyGS1
     chown system radio /dev/ttyGS1
+
 
 # BT relayer mode used VCOM
     chmod 0660 /dev/ttyGS2

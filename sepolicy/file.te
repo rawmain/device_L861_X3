@@ -21,6 +21,7 @@ type sf_rtt_file, file_type, data_file_type;
 type volte_stack_socket, file_type;
 type volte_imcb_socket, file_type;
 type volte_ua_socket, file_type;
+type volte_vt_socket, file_type;
 type dfo_socket, file_type;
 type rild2_socket, file_type;
 type rild3_socket, file_type;
@@ -65,6 +66,7 @@ type proc_mtkcooler, fs_type;
 type proc_mtktz, fs_type;
 type proc_slogger, fs_type;
 type proc_lk_env, fs_type;
+type sysfs_md32, fs_type, sysfs_type;
 type sysfs_vcorefs_pwrctrl, fs_type, sysfs_type;
 type sysfs_scp, fs_type, sysfs_type;
 
@@ -75,6 +77,7 @@ type mnld_data_file, file_type, data_file_type;
 type sysctl_socket, file_type;
 
 type backuprestore_socket, file_type;
+type nfc_socket, file_type;
 
 type protect_f_data_file, file_type, data_file_type;
 type protect_s_data_file, file_type, data_file_type;
@@ -231,3 +234,12 @@ type sysfs_ddr_type, fs_type, sysfs_type;
 # fuelgauge
 type fuelgauge_data_file, file_type, data_file_type;
 type sysfs_boot_mode, fs_type, sysfs_type;
+
+# ET310
+type sysfs_etsd, fs_type, sysfs_type;
+
+type etsd_data_file, file_type, data_file_type;
+
+# Operation : Migration
+# Purpose : md_monitor data file
+type md_monitor_data_file, file_type, data_file_type;

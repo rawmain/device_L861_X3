@@ -14,9 +14,9 @@ DEVICE_PATH := device/leeco/x3
 # Overlay Folder
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
-# Screen density
-PRODUCT_AAPT_CONFIG := normal xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi xxxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Recovery allowed devices
 TARGET_OTA_ASSERT_DEVICE := x3,X500,X507,X509,X3,x500,x507,x509,X502,x502

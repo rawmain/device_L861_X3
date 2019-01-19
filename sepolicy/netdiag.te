@@ -96,3 +96,6 @@ binder_use(netdiag)
 # Nougat
 allow netdiag proc_net:file r_file_perms;
 allow netdiag rootfs:lnk_file { getattr };
+
+allow mtk_agpsd tmpfs:dir { search };
+allow mtk_agpsd media_rw_data_file:dir search;

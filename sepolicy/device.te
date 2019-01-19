@@ -19,6 +19,7 @@ type mt6516_IDP_device, dev_type;
 type mt9p012_device, dev_type;
 type mt6516_jpeg_device, dev_type;
 type FM50AF_device, dev_type;
+type DW9763AF_device, dev_type;
 type DW9714AF_device, dev_type;
 type DW9761BAF_device, dev_type;
 type DW9814AF_device, dev_type;
@@ -157,6 +158,7 @@ type otp_device, dev_type;
 type qemu_pipe_device, dev_type;
 type icusb_device, dev_type;
 type irtx_device, dev_type;
+type irrx_device, dev_type;
 type pmic_ftm_device, dev_type;
 type shf_device, dev_type;
 type keyblock_device, dev_type;
@@ -206,3 +208,8 @@ type teei_client_device, dev_type;
 type teei_config_device, dev_type;
 type teei_vfs_device, dev_type;
 type hid_gadget_device, dev_type;
+type tfa9890_device, dev_type;
+type voldblk_device, dev_type;
+
+# Fingerprint device
+type esfp0_device, dev_type, mlstrustedobject;

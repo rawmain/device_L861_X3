@@ -177,6 +177,7 @@ allow platform_app mobicore_tui_device:chr_file { read open ioctl };
 # Purpose : MTKLogger need setup local socket with mnld
 # Package: com.mediatek.mtklogger
 allow platform_app mnld:unix_stream_socket connectto;
+allow platform_app nfc_service:service_manager find;
 
 # Date : 2015/03/24
 # Operation : New feature for AppManager Install

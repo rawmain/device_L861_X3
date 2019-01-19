@@ -200,3 +200,11 @@ allow system_app em_svr:unix_stream_socket connectto;
 
 # dev_info 
 allow system_app sysfs_devinfo:file r_file_perms;
+
+#fix fm radio access
+allow system_app fm_device:chr_file { open read write ioctl };
+#allow system_app sysfs:file { write };
+allow system_app sysfs_devices_system_cpu:file { write };
+
+#allow themeservice_app network_management_service:service_manager { find };
+

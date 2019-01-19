@@ -83,6 +83,10 @@
 /sys/devices/platform/leds-mt65xx/leds/blue   delay_on      0664  system   system
 /sys/devices/platform/leds-mt65xx/leds/blue   delay_off      0664  system   system
 
+#NFC device
+/dev/msr3110              0666   root       root
+/dev/mt6605               0660   nfc        radio
+
 #GPIO
 /dev/mtgpio               0600   radio      root
 

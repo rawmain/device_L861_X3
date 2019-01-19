@@ -133,6 +133,10 @@ type ctl_emcsmdlogger_prop, property_type;
 type ctl_eemcs_fsd_prop, property_type;
 type ctl_istd8303_prop, property_type;
 type ctl_st480_prop, property_type;
+type ctl_mmc3524xd_prop, property_type;
+type ctl_mc6470d_prop, property_type;
+type ctl_qmcX983d_prop, property_type;
+type ctl_af7133e_prop, property_type;
 #=============allow statusd==============
 type net_cdma_mdmstat, property_type;
 type cdma_prop, property_type;
@@ -176,3 +180,8 @@ type nvram_prop, property_type, mtk_property_type;
 type pq_conf_prop, property_type, mtk_property_type;
 type ril_msim_power_prop, property_type, mtk_property_type;
 type ril_sim_inserted_status, property_type, mtk_property_type;
+
+#=============allow smart audio pa set property ==============
+type smart_audio_prop, property_type;
+#============= allow em set property ===============
+type mtk_em_auto_answer_prop, property_type;

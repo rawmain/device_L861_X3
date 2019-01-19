@@ -57,6 +57,7 @@ allow meta_tst ttyGS_device:chr_file { read write ioctl open };
 allow meta_tst wmtWifi_device:chr_file { write open };
 allow meta_tst FM50AF_device:chr_file { read write ioctl open };
 allow meta_tst AD5820AF_device:chr_file { read write ioctl open };
+allow meta_tst DW9763AF_device:chr_file { read write ioctl open };
 allow meta_tst DW9714AF_device:chr_file { read write ioctl open };
 allow meta_tst DW9761BAF_device:chr_file { read write ioctl open };
 allow meta_tst DW9714A_device:chr_file { read write ioctl open };
