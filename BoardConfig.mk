@@ -104,10 +104,10 @@ $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 # remove this when 6.0 Kernel is available
 # POLICYVERS := 29
 
-#TARGET_KERNEL_SOURCE := kernel/leeco/x3
-#TARGET_KERNEL_CONFIG := x500_defconfig
-#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-#BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_KERNEL_SOURCE := kernel/leeco/x3
+TARGET_KERNEL_CONFIG := hnr_cm13_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # build old-style zip files (required for ota updater)
 BLOCK_BASED_OTA := false
