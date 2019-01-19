@@ -22,6 +22,10 @@ COMMON_GLOBAL_CPPFLAGS += \
 
 MTK_NFC_SUPPORT := yes
 
+# ViperSound
+
+USE_VIPER_PROFILES := true
+
 #FM
 
 BOARD_HAVE_ALTERNATE_FM := true

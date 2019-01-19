@@ -32,6 +32,14 @@ PRODUCT_PACKAGES += \
 	Snap \
 	libcamera_parameters_ext
 
+ifneq ($(USE_VIPER_PROFILES),true)
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf
+else
+PRODUCT_PACKAGES += \
+	ViperSound
+endif
+
 # Charger
 PRODUCT_PACKAGES += \
 	charger \
