@@ -95,12 +95,12 @@ BOARD_MKBOOTIMG_ARGS := \
   --second_offset 0x00f00000 \
 	--tags_offset 0x0df88000 \
   --board 1453346013
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+# TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 TARGET_KMODULES := true
 
 # Hack for building without kernel sources
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+# $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 # remove this when 6.0 Kernel is available
 # POLICYVERS := 29
 
@@ -226,7 +226,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/ramdisk/twrp.fstab
 else
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/ramdisk/fstab.mt6795
 endif
-TARGET_PREBUILT_RECOVERY_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+# TARGET_PREBUILT_RECOVERY_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 DEVICE_RESOLUTION := 2560x1440
 DEVICE_SCREEN_WIDTH := 2560
