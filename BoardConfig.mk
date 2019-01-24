@@ -105,7 +105,7 @@ $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 # POLICYVERS := 29
 
 TARGET_KERNEL_SOURCE := kernel/leeco/x3
-TARGET_KERNEL_CONFIG := hnr_cm13_defconfig
+TARGET_KERNEL_CONFIG := los14_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
